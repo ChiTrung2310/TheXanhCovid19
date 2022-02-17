@@ -1,0 +1,5 @@
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\bin\Release\Common.dll
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\bin\Release\Common.pdb
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Release\Common.dll
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Release\Common.pdb

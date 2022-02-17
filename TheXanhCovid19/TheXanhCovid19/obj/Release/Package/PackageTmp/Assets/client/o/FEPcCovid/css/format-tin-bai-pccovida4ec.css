@@ -1,0 +1,4 @@
+#selected-articleView-body p img{max-width: 100% !important; height: auto !important;}
+#selected-articleView-body figure img{max-width: 100% !important; height: auto !important;}
+#selected-articleView-body img{max-width: 100% !important; height: auto !important;}
+#selected-articleView-body li{list-style: unset}

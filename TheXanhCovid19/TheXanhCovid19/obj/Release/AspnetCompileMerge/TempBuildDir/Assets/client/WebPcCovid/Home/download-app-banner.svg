@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="42" viewBox="0 0 158 42">
+  <defs>
+    <clipPath id="clip-Nut_banner">
+      <rect width="158" height="42"/>
+    </clipPath>
+  </defs>
+  <g id="Nut_banner" data-name="Nut banner" clip-path="url(#clip-Nut_banner)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="158" height="42" rx="21" fill="#18d7dc"/>
+    <text id="Tải_về" data-name="Tải về" transform="translate(54 27)" fill="#fff" font-size="18" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Tải về</tspan></text>
+  </g>
+</svg>

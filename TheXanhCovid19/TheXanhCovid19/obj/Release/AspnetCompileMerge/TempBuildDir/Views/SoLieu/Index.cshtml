@@ -1,0 +1,167 @@
+﻿@model PagedList.IPagedList<Model.EF.tblTinhThanh>
+
+@using PagedList.Mvc;
+
+
+
+@{
+    ViewBag.Title = "Dữ liệu tiêm chủng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var tc = (List<Model.EF.tblThongTinTiemChung>)ViewBag.DLDAO;
+    var tT = (List<Model.EF.tblTinhThanh>)ViewBag.TTDAO;
+}
+
+
+
+
+
+    @foreach (var item in tc)
+    {
+        <tr id="row_@item.MaTC"> </tr>
+
+
+        <div class="row" style="padding:50px; text-align:center">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Số mũi tiêm toàn quốc
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.SoMuiTiemToanQuoc)</b></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Số mũi tiêm hôm qua
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.SoMuiTiemHomQua)</b></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Đối tượng đăng ký tiêm
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.DoiTuongDKTiem)</b></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Độ bao phủ
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@item.DoBaoPhu%</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Số liệu thực tế mỗi tỉnh thành</h6>
+            </div>
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" style="text-align:center" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>MÃ TT</th>
+                                <th>Tỉnh TP</th>
+                                <th>Dự kiến TC</th>
+                                <th>Phân bổ TT</th>
+                                <th>Dân số (>= 18 tuổi)</th>
+                                <th>Số liều đã tiêm</th>
+                                <th>Tỉ lệ</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in tT)
+                            {
+                                <tr id="row_@item.MaTT">
+                                    <td>@item.MaTT</td>
+                                    <td>@item.TinhTP</td>
+                                    <td><b>@string.Format("{0:0,0}", @item.DuKienTC)</b></td>
+                                    <td><b>@string.Format("{0:0,0}", @item.PhanBoTT)</b></td>
+                                    <td><b>@string.Format("{0:0,0}", @item.DanSo)</b></td>
+                                    <td><b>@string.Format("{0:0,0}", @item.SoLieuDaTiem)</b></td>
+
+                                    <td>@item.TiLe %</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                    <br />
+
+                    @*@Html.PagedListPager(Model, page => Url.Action("Index", new
+                        {
+                           page,
+                           sortOrder = ViewBag.CurrentSort,
+                           currentFilter = ViewBag.CurrentFilter,
+                           @searchString = @ViewBag.SearchString
+                        }), new PagedListRenderOptions()
+                        {
+                            LiElementClasses = new List<string> { "btn btn-light" }
+                        })*@
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,78 @@
+.dksd-href{color: #3465d9;}
+.content {
+	font-size: 22px;
+	margin-bottom: 41px;
+	color: #7D7E7E;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #3465D9;
+	border-color: #3465D9;
+}
+
+.btn-block {
+	width: 193px;
+	height: 40px;
+}
+
+#lienheBtn {
+	width: 193px;
+	font-family: Opens Sans Semibold;
+	font-size: 18px;
+	background-color: #30B55C;
+    border-color: #30B55C;
+}
+
+textarea.form-control {
+	font-size: 13px;
+	height: 153px;
+	padding: 10px;
+}
+
+.form-group {
+	margin-bottom: 12px !important;
+}
+
+#lienheBtn-container {
+	margin-top: 12px;
+}
+
+@media only screen and (min-width: 769px) {
+	.title {
+	font-size: 29px;
+	margin-bottom: 38px;
+	color: #30B55C;
+	font-family: 'Opens Sans Semibold';
+}
+	.lienhe-container {
+		margin-top: 70px;
+		margin-bottom: 73px;
+	}
+}
+
+.content p {
+	line-height: 42px;
+}
+
+.font-form-contact {
+	font-size: 13px;
+	height: 40px;
+}
+
+@media only screen and (max-width: 769px) {
+	.title {
+	font-size: 25px;
+	margin-bottom: 38px;
+	color: #30B55C;
+	font-family: 'Opens Sans Semibold';
+}
+	.lienhe-container {
+		margin-top: 102px;
+		margin-bottom: 50px;
+	}
+	.font-form-contact {
+		font-size: 13px;
+		height: 40px;
+	}
+}

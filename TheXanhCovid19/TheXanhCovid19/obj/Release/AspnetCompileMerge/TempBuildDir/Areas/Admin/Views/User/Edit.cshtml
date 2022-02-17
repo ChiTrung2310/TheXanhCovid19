@@ -1,0 +1,183 @@
+﻿@model Model.EF.tblNguoiDung
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default" style="text-align:center">
+            <div class="panel-heading">
+                <h3>Cập nhật thông tin người dùng</h3>
+
+                <h6 style="color:red">Lưu ý nếu không cần reset mật khẩu cho người dùng thì dòng mật khẩu để trống</h6>
+            </div>
+            <div class="panel-body" style="margin:50px">
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        @using (Html.BeginForm("Edit", "User", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @Html.HiddenFor(model => model.MaSo)
+
+
+
+
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            @Html.HiddenFor(model => model.OldPass)
+                            @*<div class="form-group">
+                                @Html.LabelFor(model => model.OldPass, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.PasswordFor(model => model.OldPass, new { htmlAttributes = new { @class = "form-control", @Value = "" } })
+                                @Html.ValidationMessageFor(model => model.OldPass, "", new { @class = "text-danger" })
+
+                            </div>*@
+
+                            @*@Html.HiddenFor(model => model.MatKhau)*@
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MatKhau, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.PasswordFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", @Value = "" } })
+                                @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+                            @*@Html.HiddenFor(model => model.ConfirmPass)*@
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ConfirmPass, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.PasswordFor(model => model.ConfirmPass, new { htmlAttributes = new { @class = "form-control", @Value = "" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPass, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Ho, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.Ho, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Ho, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TenDem, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.TenDem, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TenDem, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Ten, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.Ten, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Ten, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NgaySinh, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.NgaySinh, new
+                                {
+                                    htmlAttributes = new
+                                    {
+                                        @class = "date",@*@type = "date",*@@style = "width:202px;height:32px"
+}
+})
+
+                                @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.GioiTinh, htmlAttributes: new { @class = "control-label col-md-7" })
+                                &emsp; &emsp; &emsp;
+                                @Html.RadioButton("GioiTinh", "Nam") Nam &emsp; &emsp;
+                                @Html.RadioButton("GioiTinh", "Nữ") Nữ
+
+
+                                @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.QueQuan, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.QueQuan, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.QueQuan, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DienThoai, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SoCMND, htmlAttributes: new { @class = "control-label col-md-7" })
+
+                                @Html.TextBoxFor(model => model.SoCMND, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.SoCMND, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            @Html.HiddenFor(model => model.SoMuiTiem)
+
+                            @Html.HiddenFor(model => model.LoaiThe)
+
+
+                            <br />
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10" style="margin-left:200px">
+                                    <input style="background-color:green; color:white" type="submit" value="Cập nhật" class="btn btn-default" />
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

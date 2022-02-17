@@ -1,0 +1,65 @@
+﻿@model PagedList.IPagedList<Model.EF.tblThongTinTiemChung>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Thông tin tiêm chủng</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Thông tin tiêm chủng</h6>
+            </div>
+            <div class="card-body">
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" style="text-align:center" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Đối tượng đăng ký tiêm</th>
+                                <th>Số mũi tiêm hôm qua</th>
+                                <th>Số mũi tiêm toàn quốc</th>
+                                <th>Độ bao phủ</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Người cập nhật</th>
+                                <th>Ghi chú</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item.MaTC">
+                                <td>
+                                    <a href="/Admin/DuLieu/Edit/@item.MaTC">Sửa</a>
+                                </td>
+                                <td><b>@string.Format("{0:0,0}", @item.DoiTuongDKTiem)</b></td>
+                                <td><b>@string.Format("{0:0,0}", @item.SoMuiTiemHomQua)</b></td>
+                                <td><b>@string.Format("{0:0,0}", @item.SoMuiTiemToanQuoc)</b></td>
+                                <td><b>@item.DoBaoPhu %</b></td>
+                                <td><b>@item.NgayCapNhat</b></td>
+                                <td><b>@item.NguoiCapNhat</b></td>
+
+                                <td><b>@item.GhiChu</b></td>
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

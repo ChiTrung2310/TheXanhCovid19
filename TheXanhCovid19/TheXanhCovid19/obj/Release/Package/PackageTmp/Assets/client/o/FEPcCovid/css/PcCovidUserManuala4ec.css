@@ -1,0 +1,157 @@
+/*    body{ 
+    background-image: url('/WebPcCovid/Manual/M-HDSD.png');
+    opacity: 0.5;
+    background-position: -8px 1px;
+    background-repeat: no-repeat;
+  }   */
+.pc-covid-wrap{color: #000000;}
+@media only screen and (min-width: 768px){
+.bkav-pc-covid-main-feature-mobile{display: none;}
+.bkav-pc-covid-manual-title{font-size: 39px;font-family: Opens Sans SemiBold;color: #30B55C;text-align: center;padding-top: 80px;padding-bottom: 66px;text-transform: uppercase;}
+.bkav-pc-covid-title-text-all{font-size: 37px;font-family: Opens Sans SemiBold;}
+.bkav-pc-covid-feature-content-title{padding-top: 36px;padding-bottom: 23px;}
+.bkav-pc-covid-feature-content-list .bkav-pc-covid-feature-content-wrap {list-style: none;margin-left: 0; padding-left: 34px;}
+.bkav-pc-covid-feature-content-list .bkav-pc-covid-feature-content-wrap .bkav-pc-covid-feature-content-line:before {content: url("../../../WebPcCovid/Manual/bullet.svg");position: absolute;left: 17px;}
+.bkav-pc-covid-support-platform-list .bkav-pc-covid-support-platform-wrap {list-style: none;margin-left: 0; padding-left: 32px;}
+.bkav-pc-covid-support-platform-list .bkav-pc-covid-support-platform-wrap .bkav-pc-covid-support-platform-line:before {content: url("../../../WebPcCovid/Manual/bullet.svg");position: absolute;left: 17px;}
+.bkav-pc-covid-content-text-all{font-size: 18px;font-family: Opens Sans;color: #000000; line-height: 43px;padding-right: 45px;}
+.bkav-pc-covid-feature-content-wrap{font-size: 18px;font-family: Opens Sans SemiBold;color: #000000; line-height: 43px}
+.bkav-pc-covid-spill-out{background-color: #30B55C;}
+.bkav-pc-covid-image-qr-code-mobile{display: none;}
+.bkav-pc-covid-medical-declaration-image-mobile{display: none;}
+.bkav-pc-covid-domestic-move-image-mobile{display: none;}
+.bkav-pc-covid-scan-qr-image-mobile{display: none;}
+.bkav-pc-covid-image-card-image-mobile{display: none;}
+.bkav-pc-covid-image-pccovid-mobile{display: none;}
+.bkav-pc-covid-main-feature-row{padding-bottom:76px;}
+.bkav-pc-covid-main-feature-line{padding-bottom: 53px;}
+.bkav-pc-covid-image-qr-code{padding-left: 27px;}
+.bkav-pc-covid-feature-qr-title{padding-top: 154px;padding-bottom: 23px;}
+.bkav-pc-covid-image-qr-code-row{padding-bottom: 134px;}
+.bkav-pc-covid-feature-qr-content{max-width: 470px;}
+.bkav-pc-covid-medical-declaration-image{padding-top: 131px;}
+.bkav-pc-covid-medical-declaration-box{padding-top: 268px;padding-left: 71px;color: #FFFFFF;}
+.bkav-pc-covid-medical-declaration-title{padding-bottom: 28px;font-size: 37px;font-family: Opens Sans SemiBold;}
+.bkav-pc-covid-medical-declaration-content{max-width: 375px;font-size: 18px;font-family: Opens Sans; line-height: 43px}
+.bkav-pc-covid-medical-declaration-row{padding-bottom: 116px}
+.bkav-pc-covid-domestic-move-box{padding-top: 253px; }
+.bkav-pc-covid-domestic-move-title{padding-bottom: 23px;}
+.bkav-pc-covid-domestic-move-content{max-width: 405px;}
+.bkav-pc-covid-domestic-move-image{padding-top: 108px;padding-left: 16px}
+.bkav-pc-covid-domestic-move-row{padding-bottom: 73px;}
+.bkav-pc-covid-main-feature-line-2{padding-bottom: 66px}
+.bkav-pc-covid-reflect-box{padding-top: 105px;}
+.bkav-pc-covid-reflect-title{padding-bottom: 23px;}
+.bkav-pc-covid-reflect-content{max-width: 435px;line-height: 43px;font-size: 18px; font-family: Opens Sans;}
+.bkav-pc-covid-reflect-row{padding-bottom: 83px;}
+.bkav-pc-covid-scan-qr-row{padding-bottom: 76px;}
+.bkav-pc-covid-scan-qr-title{line-height: 69px;padding-bottom: 36px;}
+.bkav-pc-covid-scan-qr-box{padding-top: 172px;color: #FFFFFF;}
+.bkav-pc-covid-scan-qr-content{max-width: 375px;font-size: 18px;font-family: Opens Sans; line-height: 43px}
+.bkav-pc-covid-scan-qr-image{padding-left: 47px;padding-top: 131px}
+.bkav-pc-covid-vaccine-image{padding-top: 109px;}
+.bkav-pc-covid-reflect-image-mobile{display: none;}
+.bkav-pc-covid-vaccine-box{padding-top: 245px;padding-left: 39px;}
+.bkav-pc-covid-vaccine-title{padding-bottom: 38px;max-width: 292px}
+.bkav-pc-covid-vaccine-content{max-width: 392px;}
+.bkav-pc-covid-vaccine-row{padding-bottom: 99px;}
+.bkav-pc-covid-content-only{padding-left: 59px;}
+.bkav-pc-covid-vaccine-image-mobile{display: none;}
+.bkav-pc-covid-image-card{display: block;margin: auto;padding-top: 171px;padding-bottom: 67px;}
+.bkav-pc-covid-card-title{text-align: center;padding-bottom: 30px;color: #FFFFFF;}
+.bkav-pc-covid-card-content{max-width: 998px;padding-left: 161px;padding-bottom: 149px;font-size: 18px;font-family: Opens Sans;color: #FFFFFF; line-height: 43px}
+.bkav-pc-covid-image-icon{width: 100%;padding-top: 10px;}
+.bkav-pc-covid-line-row{padding-bottom: 120px;}
+.bkav-pc-covid-line-row-first{padding-top: 178px;}
+.bkav-pc-covid-line-row-second{padding-bottom: 102px;}
+.bkav-pc-covid-content-all{padding-left: 58px;}
+.bkav-pc-covid-title-text-all-three{padding-bottom: 14px;}
+.bkav-pc-covid-map-title{padding-top: 19px}
+.bkav-pc-covid-map-link-detail{font-size: 18px; font-family: Opens Sans SemiBold;}
+.bkav-pc-covid-map-link{color: #30B55C;}
+.bkav-pc-covid-map-content{padding-bottom: 14px; font-size: 18px;}
+.bkav-pc-covid-spill{background-color: #F9F9F9;padding-bottom: 163px;}
+.bkav-pc-covid-line-bottom{padding-bottom: 8px}
+.bkav-pc-covid-support-platform-box{padding-top: 178px;}
+.bkav-pc-covid-support-platform-title{padding-bottom: 40px;}
+.bkav-pc-covid-image-supportplatform{padding-top: 133px;padding-left: 44px;}
+.bkav-pc-covid-image-pccovid{display: block;margin: auto;padding-top: 145px;padding-bottom: 36px;}
+.bkav-pc-covid-bottom-title{font-size: 42px;font-family: Opens Sans;color: #FFFFFF;text-align: center;padding-bottom: 103px;}
+.bkav-pc-covid-bottom-content{display: block;margin: auto;text-align: center;max-width: 930px;font-size: 18px;font-family: Opens Sans; line-height: 43px;color: #FFFFFF;padding-bottom: 132px;}
+.bkav-pc-covid-image-trace-icon-mobile{display: none;}
+.bkav-pc-covid-image-map-icon-mobile{display: none;}
+.bkav-pc-covid-image-address-icon-mobile{display: none;}
+.bkav-pc-covid-image-supportplatform-mobile{display: none;}
+.bkav-pc-covid-address-title{padding-top: 16px;}
+}
+@media only screen and (max-width: 768px){
+.bkav-pc-covid-manual-title{font-size: 20px;font-family: Opens Sans SemiBold;color: #30B55C;text-align: center;padding-top: 92px;padding-bottom: 18px;}
+.bkav-pc-covid-main-feature-mobile{margin: auto;display: block;padding-bottom: 38px;padding-top: 29px;}
+.bkav-pc-covid-main-feature{display: none;}
+.bkav-pc-covid-feature-content-title{padding-left: 16px;padding-bottom: 22px}
+.bkav-pc-covid-feature-content-box{background-color: #FAFAFA; border-radius: 8px}
+.bkav-pc-covid-feature-content-list{padding-left: 15px;padding-bottom: 15px;line-height: 30px;}
+.bkav-pc-covid-feature-content-list-line{display: inline-flex;}
+.bkav-pc-covid-feature-box{padding-bottom: 16px}
+.bkav-pc-covid-feature-content-list .bkav-pc-covid-feature-content-wrap  {list-style: none;}
+.bkav-pc-covid-feature-content-list .bkav-pc-covid-feature-content-wrap .bkav-pc-covid-feature-content-line:before {content: url("../../../WebPcCovid/Manual/bulletmobile.svg");padding-right: 7px;}
+.bkav-pc-covid-support-platform-list .bkav-pc-covid-support-platform-wrap {list-style: none;line-height: 31px;}
+.bkav-pc-covid-support-platform-list .bkav-pc-covid-support-platform-wrap .bkav-pc-covid-support-platform-line:before {content: url("../../../WebPcCovid/Manual/bulletmobile.svg");padding-right: 7px;}
+.bkav-pc-covid-image-qr-code-mobile{position: absolute;padding-top: 26px;padding-left: 15px;right: 15px;}
+.bkav-pc-covid-feature-qr-title-box{padding-top: 421px;padding-left: 15px;padding-bottom: 18px;padding-right: 34px;}
+.bkav-pc-covid-feature-qr-title{padding-bottom: 12px;}
+.bkav-pc-covid-medical-declaration-image-mobile{padding-top: 33px;padding-bottom: 34px;margin: auto;display: block;}
+.bkav-pc-covid-medical-declaration-title{padding-bottom: 12px;font-size: 22px;font-family: Opens Sans SemiBold;text-transform: uppercase;color:#FFFFFF}
+.bkav-pc-covid-medical-declaration-content{color:#FFFFFF;line-height: 30px;padding-bottom: 51px;}
+.bkav-pc-covid-domestic-move-image-mobile{padding-top: 30px;padding-bottom: 23px;display: block;margin: auto;}
+.bkav-pc-covid-domestic-move-box{padding-left: 15px;padding-bottom: 32px;}
+.bkav-pc-covid-domestic-move-title{padding-bottom: 17px;}
+.bkav-pc-covid-reflect-image{display: none;}
+.bkav-pc-covid-reflect-image-mobile{padding-top: 33px;padding-bottom: 35px;display: block;margin: auto;}
+.bkav-pc-covid-reflect-title {padding-bottom: 15px; color:#FFFFFF;}
+.bkav-pc-covid-reflect-content{font-size: 15px;font-family: Opens Sans;color: #FFFFFF;line-height: 30px;padding-bottom: 31px;padding-right: 19px;}
+.bkav-pc-covid-scan-qr-image-mobile{padding-top: 29px; padding-bottom: 38px;display: block;margin: auto;}
+.bkav-pc-covid-scan-qr-title{color:#FFFFFF;padding-bottom: 15px;}
+.bkav-pc-covid-vaccine-image{display: none;}
+.bkav-pc-covid-scan-qr-content{font-size: 15px;font-family: Opens Sans;color: #FFFFFF;line-height: 30px;padding-bottom: 30px; }
+.bkav-pc-covid-vaccine-image-mobile{padding-top: 29px;padding-bottom: 33px;display: block;margin: auto;}
+.bkav-pc-covid-vaccine-title{padding-bottom: 15px;}
+.bkav-pc-covid-vaccine-box{padding-left: 15px;}    
+.bkav-pc-covid-vaccine-content{padding-bottom: 31px;padding-right: 26px;}
+.bkav-pc-covid-image-card-image-mobile{padding-top: 47px;padding-bottom: 38px;display: block;margin: auto;}
+.bkav-pc-covid-card-title {padding-bottom: 14px;color: #FFFFFF;}
+.bkav-pc-covid-card-content{font-size: 15px;font-family: Opens Sans;color: #FFFFFF;line-height: 30px;padding-bottom: 34px;padding-right: 16px;}
+.bkav-pc-covid-image-trace-icon-mobile{display: block;margin: auto;padding-top: 47px;padding-bottom: 25px;}
+.bkav-pc-covid-image-map-icon-mobile{display: block;margin: auto;padding-top: 44px;padding-bottom: 27px;}
+.bkav-pc-covid-image-address-icon-mobile{display: block;margin: auto; padding-top: 41px;padding-bottom: 31px;}
+.bkav-pc-covid-image-icon{display: none;}
+.bkav-pc-covid-address-title{padding-bottom: 13px;}
+.bkav-pc-covid-content-all{padding-left: 15px;padding-right: 30px;}
+.bkav-pc-covid-address-content{padding-bottom: 30px;}
+.bkav-pc-covid-trace-title{padding-bottom: 13px;}
+.bkav-pc-covid-trace-content {padding-bottom: 28px;}
+.bkav-pc-covid-map-title{padding-bottom: 13px;}
+.bkav-pc-covid-map-link-detail{line-height: 33px;padding-bottom: 46px;}
+.bkav-pc-covid-map-link{color: #DDFF00;}
+.bkav-pc-covid-map-content {font-size: 15px;font-family: Opens Sans;line-height: 30px;padding-right: 37px;padding-bottom: 14px;}
+.bkav-pc-covid-support-platform-title{padding-bottom: 15px;}
+.bkav-pc-covid-image-supportplatform-mobile{display: block;margin: auto;padding-top: 53px;padding-bottom: 53px}
+.bkav-pc-covid-support-platform-list{padding-bottom: 33px;}
+.bkav-pc-covid-image-pccovid-mobile{display: block;margin: auto; padding-top: 57px;padding-bottom: 17px;}
+.bkav-pc-covid-support-platform-box{padding-left: 15px;}
+.bkav-pc-covid-bottom-title{text-align: center;display: block;margin: auto;text-transform: uppercase;padding-bottom: 31px;line-height: 26px;padding-left: 15px;padding-right: 15px;}
+.bkav-pc-covid-bottom-content{line-height: 29px;padding-left: 19px;padding-bottom: 25px; padding-right: 19px;}
+.bkav-pc-covid-image-supportplatform{display: none;}
+.bkav-pc-covid-main-feature-line{display: none;}
+.bkav-pc-covid-main-feature-line-2{display: none;}
+.bkav-pc-covid-title-text-all{font-size: 22px;font-family: Opens Sans SemiBold;text-transform: uppercase;}
+.bkav-pc-covid-content-text-all{font-size: 15px;font-family: Opens Sans;color: #000000;padding-right: 25px;line-height: 30px;}
+.bkav-pc-covid-image-qr-code {display: none;}
+.bkav-pc-covid-image-card{display: none;}
+.bkav-pc-covid-spill-out-mobile{background-color: #30B55C;border-radius: 8px;margin-left: 15px;margin-right: 15px;margin-bottom: 15px;}
+.bkav-pc-covid-medical-declaration-image{display: none;}
+.bkav-pc-covid-domestic-move-image{display: none;}
+.bkav-pc-covid-scan-qr-image{display: none;}
+.bkav-pc-covid-image-pccovid{display: none;}
+.bkav-pc-covid-content-only{color:#FFFFFF;}
+}

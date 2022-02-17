@@ -1,0 +1,90 @@
+﻿@model PagedList.IPagedList<Model.EF.tblTinhThanh>
+@using PagedList.Mvc;
+
+
+@{
+    ViewBag.Title = "Quản lý tỉnh thành";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2 style="text-align:center">Danh sách tỉnh thành</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Danh sách tỉnh thành</h6>
+            </div>
+            <div class="card-body">
+
+                @using (Html.BeginForm("Index", "TinhThanh", FormMethod.Get))
+                {
+                    <div class="input-group" style="margin:15px; width:500px">
+                        <input type="text" name="searchString" class="form-control bg-light border-0 small" placeholder="Từ khóa..."
+                               aria-label="Search" value="@ViewBag.SearchString" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                }
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" style="text-align:center" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>MÃ TT</th>
+                                <th>Tỉnh TP</th>
+                                <th>Dự kiến TC</th>
+                                <th>Phân bổ TT</th>
+                                <th>Dân số (>= 18 tuổi)</th>
+                                <th>Số liều đã tiêm</th>
+                                <th>Tỉ lệ</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item.MaTT">
+                                <td>
+                                    <a href="/Admin/TinhThanh/Edit/@item.MaTT">Sửa</a>
+                                </td>
+                                <td>@item.MaTT</td>
+                                <td>@item.TinhTP</td>
+                                <td><b>@string.Format("{0:0,0}", @item.DuKienTC)</b></td>
+                                <td><b>@string.Format("{0:0,0}", @item.PhanBoTT)</b></td>
+                                <td><b>@string.Format("{0:0,0}", @item.DanSo)</b></td>
+                                <td><b>@string.Format("{0:0,0}", @item.SoLieuDaTiem)</b></td>
+                              
+                                <td>@item.TiLe %</td>
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new{
+                       page,
+                       sortOrder = ViewBag.CurrentSort,
+                       currentFilter = ViewBag.CurrentFilter,
+                       @searchString = @ViewBag.SearchString
+                    }), new PagedListRenderOptions(){
+                        LiElementClasses = new List<string> { "btn btn-light" } })
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

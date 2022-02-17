@@ -1,0 +1,67 @@
+﻿@model TheXanhCovid19.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="width:40%">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="col-lg-12">
+            @using (Html.BeginForm("Login", "User", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal" style="height: 570px; text-align:center">
+                    <h4 style="padding:30px">Đăng nhập</h4>
+                    <hr />
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.UserName, new { placeholder = "Số điện thoại", @class = "form-control", @autofocus = "autofocus" })
+                    </div>
+
+                    <div class="form-group">
+                      
+                            @Html.PasswordFor(model => model.Password, new { placeholder = "Mật khẩu", @class = "form-control", id = "password" })
+                            <input type="button" id="eye" value="Show" onclick="toggle()" style="font-size:15px; position: absolute; right:1%; transform: translate(0,-50%); top: 50%; height:85%" />
+             
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-12">
+                            <input style="width:100%; padding:10px" type="submit" value="ĐĂNG NHẬP" class="btn btn-success" />
+                            <hr />
+                            <a href="/User/ForgotPassword" style="width:100%; padding:10px" class="btn btn-warning"> QUÊN MẬT KHẨU </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<script>
+    var state = false;
+    function toggle() {
+        if (state) {
+            document.getElementById("password").setAttribute("type", "password");
+            document.getElementById("eye").value = "Show";
+            state = false;
+        } else {
+            document.getElementById("password").setAttribute("type", "text");
+            document.getElementById("eye").value = "Hide";
+            state = true;
+        }
+    }
+     
+</script>
+

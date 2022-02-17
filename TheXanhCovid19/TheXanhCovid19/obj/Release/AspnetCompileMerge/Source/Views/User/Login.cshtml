@@ -1,0 +1,51 @@
+﻿@model TheXanhCovid19.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="form-horizontal" style="height: 570px; text-align:center">
+            <h4 style="padding:30px">Đăng nhập</h4>
+            <hr />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            <br />
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+
+                    @Html.TextBoxFor(model => model.UserName, new { style = "width:36em; margin-left:250px; padding:5px  " })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+
+                    @Html.PasswordFor(model => model.Password, new { style = "width:36em; margin-left:250px; padding:5px " })
+
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-9">
+                    <input style="width:52%; padding:10px" type="submit" value="Đăng nhập" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+</div>
+

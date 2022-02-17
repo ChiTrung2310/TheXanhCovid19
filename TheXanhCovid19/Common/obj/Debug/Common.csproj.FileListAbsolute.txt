@@ -1,0 +1,6 @@
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\bin\Debug\Common.dll
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\bin\Debug\Common.pdb
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Debug\Common.dll
+C:\Users\Mr Trung\source\repos\TheXanhCovid19\Common\obj\Debug\Common.pdb

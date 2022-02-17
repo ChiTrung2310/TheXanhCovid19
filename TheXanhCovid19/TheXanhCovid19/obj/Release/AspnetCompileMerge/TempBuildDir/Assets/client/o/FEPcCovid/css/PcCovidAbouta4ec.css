@@ -1,0 +1,38 @@
+.pccovid-color{color: #30B55C}
+.pccovid-about-title{color: #30B55C;font-family: 'Opens Sans Semibold';text-align: center;}
+.pccovid-about-content-wrap{box-shadow: 0px 0px 6px #e2e2e2;font-family: 'Opens Sans Semibold';}
+.pccovid-about-content{font-family: 'OpenSans';}
+.pccovid-about-team{background-color: #FAFAFA;text-align: center; font-family: 'Opens Sans Semibold';}
+@media(max-width: 767px) {
+	.pccovid-about-wrap{margin-top: 92px; margin-bottom: 13px}
+	.pccovid-about-title{font-size: 20px}
+	.pccovid-about-content-wrap{margin-top: 22px;padding: 13px 26px 20px 26px;font-size: 13px;border-radius: 8px;}
+	.pccovid-about-head{margin-top: 19px; font-size: 16px;line-height: 26px;}
+	.pccovid-about-description{font-family: 'OpenSans';margin-top: 9px;line-height: 20px;}
+	.pccovid-about-content{margin-top: 17px;line-height: 20px}
+	.pccovid-about-contact{margin-top: 26px;}
+	.pccovid-about-team-row{margin-top: 16px;}
+	.pccovid-about-team{width: 100%;margin-bottom: 15px; height: 143px; border-radius: 8px;font-size: 15px;}
+	.pccovid-about-team-title{padding-top: 16px;}
+	.pccovid-about-team-lead{width: 194px; margin: auto; margin-top: 21px;}
+	.pccovid-about-team-operate{margin: auto; width: 162px;margin-top: 16px;}
+	.pccovid-about-team-dev{margin: auto; width: 177px; margin-top: 16px;}
+	.pccovid-about-team-title-dev{padding-top: 38px;}
+}
+@media(min-width: 768px) {
+	.pccovid-about-img{display: none}
+	.pccovid-about-wrap{ margin-top: 79px;margin-bottom: 154px;}
+	.pccovid-about-title{font-size: 39px;}
+	.pccovid-about-content-wrap{margin-top: 34px; border-radius: 20px;padding: 42px 62px 31px 62px;font-size: 18px;}
+	.pccovid-about-head{font-size: 31px;}
+	.pccovid-about-description{margin-top: 25px;max-width: 1032px;line-height: 35px;}
+	.pccovid-about-content{margin-top: 24px;line-height: 35px}
+	.pccovid-about-contact{margin-top: 27px;}
+	.pccovid-about-team-row{margin-top: 45px;}
+	.pccovid-about-team{border-radius: 17px; height: 242px; width: 375px;font-size: 17px}
+	.pccovid-about-team-title{padding-top: 27px;}
+	.pccovid-about-team-lead{margin-top: 52px;}
+	.pccovid-about-team-operate{margin-top: 47px;}
+	.pccovid-about-team-dev{margin-top: 62px;}
+	
+}

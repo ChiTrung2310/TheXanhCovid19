@@ -1,0 +1,111 @@
+﻿@model  Model.EF.tblKhaiBaoYTe
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@section jsFooter{
+
+    <script src="/Assets/client/js/controller/userController.js"></script>
+}
+
+@using (Html.BeginForm("Index", "QR", FormMethod.Post))
+{
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="col-sm-6" style="text-align:center">
+                <div class="col-md-12" style="padding:30px">
+
+                    <h3>TẠO MÃ QR ĐỊA ĐIỂM</h3>
+
+                    <h6 style="color:red; padding:5px">Khuyến cáo: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình sự</h6>
+                    <h6 style="color:red; padding:5px">Điền đầy đủ thông tin để có mã QR chính xác nhất</h6>
+                    <br />
+
+                    <div class="form-group">
+                        <label class="col-md-3">Tên địa điểm:</label>
+                        <input type="text" name="qrcode" required autofocus />
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ProvinceID, htmlAttributes: new { @class = "col-md-3" })
+
+                        @Html.DropDownList("ProvinceID", new SelectList(new string[] { }), new { Name = "qrcode1", @id = "ddlProvince", @style = "width:196px; height:32px" })
+
+                        @Html.ValidationMessageFor(model => model.ProvinceID, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DistrictID, htmlAttributes: new { @class = "col-md-3" })
+
+                        @Html.DropDownList("DistrictID", new SelectList(new string[] { }), new { Name = "qrcode2", @id = "ddlDistrict", @style = "width:196px; height:32px" })
+
+                        @Html.ValidationMessageFor(model => model.DistrictID, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.WardsID, htmlAttributes: new { @class = "col-md-3" })
+
+                        @Html.DropDownList("WardsID", new SelectList(new string[] { }), new { Name = "qrcode3", @id = "ddlWards", @style = "width:196px; height:32px" })
+
+                        @Html.ValidationMessageFor(model => model.WardsID, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-3">Số nhà:</label>
+                        <input type="text" name="qrcode4" />
+                    </div>
+
+
+                    <div class="">
+                        <label class="col-md-3">Họ và tên:</label>
+                        <input type="text" name="qrcode5" required />
+                    </div>
+
+                    <br />
+                    <div style="padding:10px">
+
+                        <input style="margin-left:30px;" type="submit" class="btn btn-success" value="TẠO MÃ QR ĐỊA ĐIỂM" />
+
+                        <a href="/Information/Index" style="width:16%" class="btn btn-warning"> QUAY LẠI</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col-sm-6" style="text-align:center">
+                <div class="col-md-12" style="padding:10px">
+
+                    <input type="hidden" value="" required />
+
+                    @if (ViewBag.QRCodeImage != null)
+                    {
+                        <h3 style="height:37px; padding:20px">TẠO MÃ QR ĐỊA ĐIỂM THÀNH CÔNG</h3>
+                        <img src="@ViewBag.QRCodeImage" alt="" style="height:55%; width:55%; margin-top:8%" />
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+

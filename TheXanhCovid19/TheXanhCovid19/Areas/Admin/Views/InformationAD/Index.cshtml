@@ -1,0 +1,130 @@
+﻿@model Model.EF.tblQuanTri
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h4 style="padding:30px; text-align:center">HỒ SƠ NGƯỜI QUẢN TRỊ</h4>
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+
+
+
+        <div class="col-sm-6" >
+            <div class="form-group" style="text-align:center; padding:30px">
+
+                <img class="img-profile rounded-circle" src="/Assets/admin/img/undraw_profile.svg" width="50%" height="50%">
+
+            </div>
+
+            <div class="form-group" style="text-align:center; padding:30px">
+
+                <a href="/Admin/InformationAD/ChangePassword/@Model.MaQT" class="btn btn-primary">
+                    ĐỔI MẬT KHẨU
+                </a>
+
+                <a href="/Admin/InformationAD/Edit/@Model.MaQT" class="btn btn-primary">
+                    CẬP NHẬT THÔNG TIN
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="col-sm-6">
+            <div class="col-md-6" style="padding:25px">
+
+                <div class="form-group" style="padding:15px">
+
+                    <h3 style="font-weight:bold">  @Html.DisplayFor(model => model.Ho) @Html.DisplayFor(model => model.TenDem)  @Html.DisplayFor(model => model.Ten) </h3>
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.NgaySinh)
+
+
+
+                    @Html.DisplayFor(model => model.NgaySinh)
+
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.GioiTinh)
+
+
+
+                    @Html.DisplayFor(model => model.GioiTinh)
+
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.QueQuan)
+
+
+
+                    @Html.DisplayFor(model => model.QueQuan)
+
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.DiaChi)
+
+
+
+                    @Html.DisplayFor(model => model.DiaChi)
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.DienThoai)
+
+
+
+                    @Html.DisplayFor(model => model.DienThoai)
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.Role)
+
+
+
+                    @Html.DisplayFor(model => model.Role)
+
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.DisplayNameFor(model => model.Email)
+
+
+                    @Html.DisplayFor(model => model.Email)
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

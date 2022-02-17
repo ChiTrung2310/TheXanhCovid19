@@ -1,0 +1,286 @@
+﻿@model PagedList.IPagedList<Model.EF.tblThongTinTiemChung>
+
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Trang Chủ</h1>
+        <a href="#" onclick="sweetAlert()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Tạo báo cáo
+        </a>
+
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            function sweetAlert() {
+                Swal.fire(
+                    'Xin chào !',
+                    'Chức năng này đang được phát triển !!!',
+                    'success'
+                )
+            }
+        </script>
+
+    </div>
+
+    <!-- Content Row -->
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr id="row_@item.MaTC"> </tr>
+
+
+            <div class="row">
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Số mũi tiêm toàn quốc
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.SoMuiTiemToanQuoc)</b></div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-syringe fa-2x text-black-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        Số mũi tiêm hôm qua
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.SoMuiTiemHomQua)</b></div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-syringe fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                        Đối tượng đăng ký tiêm
+                                    </div>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><b>@string.Format("{0:0,0}", @item.DoiTuongDKTiem)</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-alt fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Requests Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        Độ bao phủ
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@item.DoBaoPhu%</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-poll fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+
+
+
+
+
+
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 50px auto"></div>
+
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $.getJSON("/Admin/Home/GetData", function (data) {
+
+
+
+                Highcharts.chart('container', {
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false,
+                        type: 'pie'
+                    },
+                    title: {
+                        text: 'Tỉ lệ tiêm chủng trong toàn bộ hệ thống',
+                        style: {
+                            color: '#30B55C',
+                            fontSize: '20px',
+                            fontFamily: 'Verdana, sans-serif',
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                style: {
+                                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Tỉ lệ',
+                        colorByPoint: true,
+                        data: [{
+                            name: 'Thẻ xanh (2 mũi)',
+                            y: data.TheXanh,
+                            color: 'green'
+                        }, {
+                            name: 'Thẻ vàng (1 mũi)',
+                            y: data.TheVang,
+                            color: 'yellow'
+                        }, {
+                            name: 'Thẻ đỏ (chưa tiêm vaccine)',
+                            y: data.TheDo,
+                            sliced: true,
+                            selected: true,
+                            color: 'red'
+                        }]
+                    }]
+                });
+            });
+        });
+
+    </script>
+
+
+
+
+    <div id="container_line" style="min-width:310px; font-family: Tahoma; height: 400px; max-width: 100%; margin: 10px auto"></div>
+
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("/Admin/Home/GetDataLine", function (data) {
+                var Names = []
+                var DT = []
+                var DK = []
+                for (var i = 0; i < data.length; i++) {
+                    Names.push(data[i].name);
+                    DT.push(data[i].count);
+                    DK.push(data[i].trung);
+                }
+
+                Highcharts.chart('container_line', {
+                    chart: {
+                        type: 'line',
+                        style: {
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    },
+                    title: {
+                        text: 'Dữ liệu tiêm chủng của các tỉnh thành trong cả nước',
+                        style: {
+                            color: '#30B55C',
+                            fontSize: '20px',
+                            fontFamily: 'Verdana, sans-serif',
+                        }
+                    },
+                    subtitle: {
+                        text: 'Nguồn: Cổng thông tin tiêm chủng',
+                        style: {
+                            color: 'red',
+                            fontSize: '15px',
+                            fontFamily: 'Verdana, sans-serif',
+                        }
+                    },
+                    xAxis: {
+                        categories: Names
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Triệu liều (M)',
+                            style: {
+                                color: 'black',
+                                fontSize: '13px',
+                                fontFamily: 'Verdana, sans-serif',
+                            }
+                        }
+                    },
+                    plotOptions: {
+                        line: {
+                            dataLabels: {
+                                enabled: true
+                            },
+                            enableMouseTracking: false
+                        }
+                    },
+
+                    series: [{
+                        name: 'Số liều đã tiêm',
+                        data: DT
+
+                    },
+                    {
+                        name: 'Dự kiến tiêm chủng',
+                        data: DK
+                    }]
+
+                });
+            });
+        });
+
+    </script>
+
+
+
+</div>
+<!-- /.container-fluid -->

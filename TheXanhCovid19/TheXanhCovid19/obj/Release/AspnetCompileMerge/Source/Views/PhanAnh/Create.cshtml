@@ -1,0 +1,127 @@
+﻿@model Model.EF.tblPhanAnh
+@using BotDetect.Web.Mvc;
+<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl"
+      rel="stylesheet" type="text/css" />
+@{ MvcCaptcha registerCapcha = new MvcCaptcha("registerCapcha"); }
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default" style="text-align:center">
+            <div class="panel-heading" style="padding:30px">
+                <h3>Phản ánh các vấn đề về PC-Covid</h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+
+                        @using (Html.BeginForm("Create", "PhanAnh", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @Html.HiddenFor(model => model.NgayPhanAnh, new { @Value = @DateTime.Now.ToShortDateString() })
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+
+                                @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "", @Required = true, @style = "width: 20%;" } })
+
+                                @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SoCMND, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                @Html.TextBoxFor(model => model.SoCMND, new { @class = "", @Required = true, @type = "number", @min = "0", @style = "width: 20%;" })
+
+                                @Html.ValidationMessageFor(model => model.SoCMND, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DienThoai, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                @Html.TextBoxFor(model => model.DienThoai, new { @class = "", @Required = true, @type = "number", @min = "0", @style = "width: 20%;" })
+
+                                @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                @Html.TextBoxFor(model => model.Email, new { @class = "", @Required = true, @type = "email", @style = "width: 20%;" })
+
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TieuDe, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                @Html.EditorFor(model => model.TieuDe, new { htmlAttributes = new { @class = "", @Required = true, @style = "width: 20%;" } })
+
+                                @Html.ValidationMessageFor(model => model.TieuDe, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NoiDung, htmlAttributes: new { @class = "control-label col-md-2" })
+
+
+                                @Html.TextAreaFor(model => model.NoiDung, new { @class = "", cols = 32, @rows = 6, placeholder = "Hãy ghi vấn đề của bạn ở đây..." })
+
+                                @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-12">
+                                    <div style="margin-left:49%">
+                                        @Html.Captcha(registerCapcha)
+                                    </div>
+                                    <div style="margin-left:12%">
+                                        @Html.TextBox("CaptchaCode")
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            <div style="color: red; font-style: italic;">
+                                <p> Xin vui lòng kiểm tra kỹ các thông tin bắt buộc(VD: Họ và tên, Số điện thoại, CCCD, Email). Đúng định dạng.* </p>
+                                <p>Các thông tin bắt buộc phải giống với thông tin được đăng ký trên "Giấy xác nhận đã tiêm Vắc xin COVID-19" (Không viết tắt, nhập đúng và đủ thông tin).*</p>
+                                <p>Cá nhân phản ánh thành công trên hệ thống sẽ được đưa vào danh sách xử lý. Kết quả xử lý sẽ thông báo qua số điện thoại hoặc email bạn đăng ký ở trên.* </p>
+                                <p>Bằng việc nhấn nút <span style="font-size:20px"> "Gửi phản hồi" </span>, bạn đã xác nhận các thông tin đã cung cấp là chính xác và đồng ý chịu trách nhiệm trước pháp luật với thông tin cung cấp.Trân trọng cảm ơn. </p>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Gửi phản hồi" class="btn btn-primary" />
+                                </div>
+                            </div>
+
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

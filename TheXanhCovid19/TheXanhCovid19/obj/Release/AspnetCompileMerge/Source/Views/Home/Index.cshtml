@@ -1,0 +1,667 @@
+﻿
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="wrapper-content">
+
+    <div class="OneColumnFull" id="main-content" role="main">
+
+        <div class="portlet-layout">
+
+            <div class="portlet-column portlet-column-only" id="column-1">
+
+                <div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
+
+                    <div class="portlet-boundary portlet-boundary_HomePortlet_  portlet-static portlet-static-end decorate  " id="p_p_id_HomePortlet_INSTANCE_vOAbkzNhPy80_">
+                        <span id="p_HomePortlet_INSTANCE_vOAbkzNhPy80"></span>
+
+                        <section class="portlet" id="portlet_HomePortlet_INSTANCE_vOAbkzNhPy80">
+
+                            <div class="portlet-content">
+
+                                <div class=" portlet-content-container">
+
+                                    <div class="portlet-body">
+
+                                        <!--Khai bao de nhan UTF-8 -->
+
+                                        <link href="~/Assets/client/o/FEPcCovid/css/Homea4ec.css" rel="stylesheet" />
+                                        <link href="~/Assets/client/o/FEPcCovid/css/jquery.fancybox.mina4ec.css" rel="stylesheet" />
+                                        <script src="~/Assets/client/o/FEPcCovid/js/ua-parserbe66.js"></script>
+                                        <script src="~/Assets/client/o/FEPcCovid/js/RemoveVNTonesbe66.js"></script>
+                                        <script src="~/Assets/client/o/FEPcCovid/js/PcCovidHomebe66.js"></script>
+                                        <script src="~/Assets/client/o/FEPcCovid/js/jquery.fancybox.minbe66.js"></script>
+
+                                        <!-- TinNT Home -->
+                                        <div class="_os__banner___home">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="pc-covid-banner">
+                                                            <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/banner.png">
+                                                        </div>
+                                                        <div class="_osContentBanner">
+                                                            <div class="_osBanner-text1">Pc-covid</div>
+                                                            <div class="_osBanner-text2">Ứng dụng phòng, chống dịch Covid-19 Quốc gia</div>
+                                                            <div class="_os__btn-download dl_des">
+                                                                <a class="pccovid-download-apk d-none" href="~/Assets/client/WebPcCovid/doc/PC-Covid.apk" target="_blank"><img src="~/Assets/client/WebPcCovid/Home/download-app-banner.svg"></a>
+                                                                <div class="btn_appSt"><a target="_blank" href="https://apps.apple.com/vn/app/bluezone/id1508062685?ls=1"><img src="~/Assets/client/WebPcCovid/Home/appStore.svg"></a></div>
+                                                                <div><a target="_blank" href="https://play.google.com/store/apps/details?id=com.mic.bluezone"><img src="~/Assets/client/WebPcCovid/Home/googlePlay.svg"></a></div>
+                                                            </div>
+                                                            <div class="_os__btn-download dl_mb">
+                                                                <a href="index.html" target="_blank"><img src="~/Assets/client/WebPcCovid/Home/btn-caidat.svg"></a>
+                                                            </div>
+                                                            <!-- <div class="_os__btn-download dl_mb">
+                                                                <a href="/WebPcCovid/doc/PC-Covid.apk" target="_blank"><img src="/WebPcCovid/Home/btn-tai-ve.svg"></a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- AnhNDg Home -->
+                                        <div class="app-feature-wrap">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="personal-qr-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Personal-QR.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Mã QR
+                                                                </div>
+                                                                <!-- <div class="app-feature-popup-description">
+                                                                    Mỗi người dân có 1 mã QR cá nhân duy nhất hiển thị thông tin liên quan đến phòng, chống dịch Covid-19 phù hợp với chiến lược phòng, chống dịch Quốc gia.
+                                                                </div> -->
+                                                                <div class="app-feature-popup-description">
+                                                                    Mỗi người dân được cấp 1 mã QR cá nhân duy nhất và được tạo trên ứng dụng PC-Covid. Khi vào, ra các cơ quan, tổ chức, chốt kiểm dịch, bệnh viện, địa điểm công cộng… người dân phải quét mã QR.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Thông qua mã QR đã quét tại các địa điểm, tổ chức có thẩm quyền có thể truy vấn dữ liệu liên quan phục vụ công tác phòng, chống dịch trong trường hợp phát sinh các ca nghi nhiễm. Từ đó nhanh chóng xác định nguy cơ lây nhiễm và khuyến cáo cho người dân, cũng như chủ địa điểm có xuất hiện ca nghi nhiễm, xử lý kịp thời ngăn chặn sự lây lan của dịch, bệnh.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="health-declare-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Health-declare.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Khai báo y tế
+                                                                </div>
+                                                                <!-- <div class="app-feature-popup-description">
+                                                                    Khi có các dấu hiệu như ho, sốt, mất vị giác… hoặc có liên quan, tiếp xúc người nghi nhiễm Covid-19. Người dân cần chủ động khai báo y tế để được sớm hỗ trợ.
+                                                                </div> -->
+                                                                <div class="app-feature-popup-description">
+                                                                    Mỗi người dân cần thực hiện nghiêm việc khai báo ý tế, giúp cơ quan chức năng phát hiện sớm ca bệnh, cũng như nguy cơ lây nhiễm trong cộng đồng, phục vụ hiệu quả công tác phòng, chống dịch. Đây là trách nhiệm, đồng thời cũng là quyền lợi của người dân để được phát hiện bệnh sớm và điều trị kịp thời. Một số trường hợp người dân cần khai báo y tế ngay:
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi có các dấu hiệu nghi nhiễm như ho, sốt, mất vị giác…
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi có liên quan, tiếp xúc người nghi nhiễm Covid-19
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi đi đến các địa điểm có yêu cầu khai báo y tế
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi di chuyển qua lại giữa các vùng khác nhau
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="report-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Report.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Phản ánh
+                                                                </div>
+                                                                <!-- <div class="app-feature-popup-description">
+                                                                    Người dân có thể gửi phản ánh về thông tin dịch bệnh, các trường hợp nghi ngờ nhiễm, hay các vấn đề trong công tác thực hiện quy định, phòng chống dịch bệnh.
+                                                                </div> -->
+                                                                <div class="app-feature-popup-description">
+                                                                    Thông tin phản ánh của người dân là hoàn toàn bảo mật, và chỉ được tiếp nhận, xử lý bởi cơ quan chức năng có thẩm quyền. Tuy nhiên người dân có trách nhiệm phải phản ánh trung thực và chỉ phản ánh các vấn đề liên quan đến dịch bệnh và công tác phòng, chống dịch bệnh Covid-19. Một số ví dụ người dân có thể phán ánh:
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi phát hiện các ca nhiễm bệnh
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi phát hiện các cơ sở, địa điểm kinh doanh, giải trí, nơi tập trung đông người… không tuân thủ các quy định phòng, chống dịch
+                                                                </div>
+                                                                <div>
+                                                                    -	Khi có các biểu hiện tiêu cực từ phía các cơ quan, tổ chức thực thi việc phòng, chống dịch.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="location-qr-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Location-QR.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Mã QR địa điểm
+                                                                </div>
+                                                                <!-- <div class="app-feature-popup-description">
+                                                                    Các địa điểm: Cơ quan, Siêu thị, Bệnh viện, Nơi công cộng… đăng ký mã QR địa điểm và phải đảm bảo khi người dân vào, ra địa điểm phải được quét mã QR.
+                                                                </div> -->
+                                                                <div class="app-feature-popup-description">
+                                                                    Mỗi địa điểm: Cơ quan, Siêu thị, Trường học, Bệnh viện, Nơi công cộng… được cấp mã QR địa điểm và được tạo trên ứng dụng PC-Covid hoặc website PC-Covid. Khi người dân vào, ra các địa điểm… quản lý địa điểm phải đảm bảo quét đầy đủ mã QR của người dân.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Thông qua mã QR đã quét tại các địa điểm, tổ chức có thẩm quyền có thể truy vấn dữ liệu liên quan phục vụ công tác phòng, chống dịch trong trường hợp phát sinh các ca nghi nhiễm. Từ đó nhanh chóng xác định nguy cơ lây nhiễm và khuyến cáo cho người dân, cũng như chủ địa điểm có xuất hiện ca nghi nhiễm, xử lý kịp thời ngăn chặn sự lây lan của dịch, bệnh. Chủ địa điểm có thể xem hướng dẫn cách tạo và quản lý mã QR địa điểm để biết thêm thông tin. 
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="Local-travel-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Local-travel.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Di chuyển nội địa
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân cần khai báo thông tin khi có nhu cầu di chuyển nội địa trong nước. Từ đó các cơ quan chức năng quản lý được thông tin di chuyển, thông tin y tế, phục vụ việc phòng, chống dịch Covid-19.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Sau khi khai báo, ứng dụng PC-Covid sẽ lưu thông tin dưới dạng mã QR. Tại các điểm kiểm soát di chuyển nội địa như sân bay, nhà ga, các điểm kiểm soát di chuyển, người dân cần đưa mã QR để điểm kiểm soát di chuyển quét mã.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="vaccine-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Vaccine.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Vaccine, kết quả xét nghiệm
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân có thể xem thông tin chi tiết về số mũi vaccine mình đã tiêm, mũi tiêm gần nhất vào thời điểm nào. Ứng dụng PC-Covid cũng hiển thị kết quả xét nghiệm Covid-19 khi có kết quả xét nghiệm.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Các thông tin tiêm vaccine và xét nghiệm Covid-19 được liên thông đồng bộ trên cả nước, do vậy người dân hoàn toàn yên tâm khi sử dụng PC-Covid trong các trường hợp được yêu cầu thông tin về vaccine và xét nghiệm Covid-19.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="travel-location-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Travel-location.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Nơi đã đến
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân có thể xem thông tin chi tiết về các địa điểm mình đã đến và có thực hiện việc quét mã QR khi vào ra. Các thông tin bao gồm nơi đã đến, thời gian đến (chi tiết thời gian từng lần quét mã QR).
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Ghi nhận này, giúp người dân quản lý được lộ trình của mình tại các địa điểm quét mã QR. Khi có thông tin về địa điểm các ca lây nhiễm, người dân có thể tự nắm được mình có liên quan đến ca lây nhiễm hay không.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="fast-tracking-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Fast-tracking.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Truy vết thần tốc
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Khi xuất hiện các ca nghi nhiễm Covid-19, việc tối quan trọng là phải truy vết nhanh nhất có thể, để phát hiện ra các trường hợp tiếp xúc, giảm thiểu tối đa nguy cơ lây nhiễm ra cộng đồng.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    PC-Covid cung cấp tổ hợp các thông về: Quét mã QR, Khai báo y tế, Khai báo di chuyển nội địa, Phát hiện tiếp xúc gần, Người dân phản ánh,… Kết hợp cùng hệ thống Truy vết thần tốc, để cho ra kết quả truy vết các trường hợp liên quan ca nghi nhiễm chỉ sau vài phút.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="safe-card-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Safe-card.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Thẻ thông tin Covid-19
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    PC-Covid kết nối chặt chẽ với các hệ thống quản lý tiêm vaccine, xét nghiệm Covid-19, từ đó có thể cấp các Thẻ Covid-19 cho người dân. Một số ví dụ người dân có thể được cấp Thẻ Covid-19 như: Đã tiêm đủ 2 mũi vaccine, đã xét nghiệm âm tính Covid-19 (có tác dụng ngắn hạn)…
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Thẻ thông tin Covid-19 có thể được sử dụng trong nhiều mục đích như di chuyển, đi làm, tham gia các sự kiện, qua các chốt kiểm dịch… tùy vào quy định cụ thể từng nơi, từng địa bàn.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="travel-map-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Travel-map.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Mật độ di chuyển
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân và cơ quan quản lý có thể xem được mật độ di chuyển của từng vùng, từng nhóm địa điểm, để từ đó đưa ra các biện pháp quản lý thích hợp cho phòng, chống dịch Covid-19.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Tính năng này đang được phát triển và sẽ cho ra mắt trong thời gian gần sắp tới.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="masterplan-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Masterplan.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Chiến lược tổng thể phòng, chống dịch bệnh Covid-19
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Đây là chiến lược tổng thể phòng, chống dịch bệnh Covid-19 của chính phủ.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Chiến lược đang được hoàn thiện và sẽ công bố để mọi người dân và các cơ quan quản lý nắm được trong thời gian sắp tới.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="infected-map-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Infected-map.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Xu hướng lây nhiễm
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân và cơ quan quản lý có thể xem được xu hướng lây nhiễm của từng vùng, từng nhóm địa điểm, để từ đó đưa ra các biện pháp quản lý thích hợp cho phòng, chống dịch Covid-19.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Tính năng này đang được phát triển và sẽ cho ra mắt trong thời gian gần sắp tới.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="app-feature-popup" id="alert-map-popup">
+                                                            <div class="popup-close-btn" onclick="$.fancybox.close()">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/close-popup-icon.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Alert-map.svg">
+                                                            </div>
+                                                            <div class="app-feature-popup-content">
+                                                                <div class="app-feature-popup-title">
+                                                                    Bản đồ nguy cơ
+                                                                </div>
+                                                                <div class="app-feature-popup-description">
+                                                                    Người dân và cơ quan quản lý có thể xem được Bản đồ nguy cơ lây nhiễm Covid-19 của từng vùng, từng địa phương, để từ đó đưa ra các biện pháp quản lý thích hợp cho phòng, chống dịch Covid-19.
+                                                                </div>
+                                                                <div class="app-feature-popup-detail">
+                                                                    Tính năng này đang được phát triển và sẽ cho ra mắt trong thời gian gần sắp tới.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6 app-feature-col">
+                                                        <div class="app-feature">
+                                                            <div class="app-feature-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Personal-QR.svg">
+                                                            </div>
+                                                            <div class="app-feature-title" onclick="openPopup('personal-qr-popup')">
+                                                                Mã QR
+                                                            </div>
+                                                            <div class="app-feature-description">
+                                                                Mỗi người dân có 1 mã QR cá nhân duy nhất hiển thị thông tin liên quan đến phòng, chống dịch Covid-19 phù hợp với chiến lược phòng, chống dịch Quốc gia.
+                                                            </div>
+                                                            <div class="app-feature-detail" onclick="openPopup('personal-qr-popup')">
+                                                                Chi tiết
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 app-feature-col">
+                                                        <div class="app-feature">
+                                                            <div class="app-feature-img" id="covid19-card-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/covid19-card.svg">
+                                                            </div>
+                                                            <div class="app-feature-title" onclick="openPopup('safe-card-popup')">
+                                                                Thẻ thông tin Covid-19
+                                                            </div>
+                                                            <div class="app-feature-description">
+                                                                PC-Covid kết nối với Nền tảng quản lý tiêm vaccine, xét nghiệm, từ đó cấp Thẻ thông tin Covid-19 cho người dân phục vụ di chuyển, tham gia hoạt động công cộng.
+                                                            </div>
+                                                            <div class="app-feature-detail" onclick="openPopup('safe-card-popup')">
+                                                                Chi tiết
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 app-feature-col">
+                                                        <div class="app-feature">
+                                                            <div class="app-feature-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Health-declare.svg">
+                                                            </div>
+                                                            <div class="app-feature-title" onclick="openPopup('health-declare-popup')">
+                                                                Khai báo y tế
+                                                            </div>
+                                                            <div class="app-feature-description">
+                                                                Khi có các dấu hiệu như ho, sốt, mất vị giác… hoặc có liên quan, tiếp xúc người nghi nhiễm Covid-19. Người dân cần chủ động khai báo y tế để được sớm hỗ trợ.
+                                                            </div>
+                                                            <div class="app-feature-detail" onclick="openPopup('health-declare-popup')">
+                                                                Chi tiết
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 app-feature-col">
+                                                        <div class="app-feature">
+                                                            <div class="app-feature-img">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Report.svg">
+                                                            </div>
+                                                            <div class="app-feature-title" onclick="openPopup('report-popup')">
+                                                                Phản ánh
+                                                            </div>
+                                                            <div class="app-feature-description">
+                                                                Người dân có thể gửi phản ánh về thông tin dịch bệnh, các trường hợp nghi ngờ nhiễm, hay các vấn đề trong công tác thực hiện quy định, phòng chống dịch bệnh.
+                                                            </div>
+                                                            <div class="app-feature-detail" onclick="openPopup('report-popup')">
+                                                                Chi tiết
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-12 col-md-6 app-feature-col">
+                                                        <div class="app-feature">
+                                                            <div class="app-feature-img">
+                                                                <img class="img-fluid" src="/WebPcCovid/Home/Location-QR.svg">
+                                                            </div>
+                                                            <div class="app-feature-title" onclick="openPopup('location-qr-popup')">
+                                                                Mã QR địa điểm
+                                                            </div>
+                                                            <div class="app-feature-description">
+                                                                Các địa điểm: Cơ quan, Siêu thị, Bệnh viện, Nơi công cộng… đăng ký mã QR địa điểm và phải đảm bảo khi người dân vào, ra địa điểm phải được quét mã QR.
+                                                            </div>
+                                                            <div class="app-feature-detail" onclick="openPopup('location-qr-popup')">
+                                                                Chi tiết
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                                <div class="row" id="app-sub-feature-wrap">
+                                                    <div class="col-6 col-md-4 order-1">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('location-qr-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/qr-location.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('location-qr-popup')">
+                                                                Mã QR địa điểm
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-2">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('vaccine-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Vaccine.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title">
+                                                                Vaccine, kết quả xét nghiệm
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-3">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('travel-location-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Travel-location.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('travel-location-popup')">
+                                                                Nơi đã đến
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-4">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('fast-tracking-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Fast-tracking.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('fast-tracking-popup')">
+                                                                Truy vết thần tốc
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-6">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('Local-travel-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Local-travel.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('Local-travel-popup')">
+                                                                Di chuyển nội địa
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-6">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('alert-map-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Alert-map.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('alert-map-popup')">
+                                                                Bản đồ nguy cơ
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-7">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('travel-map-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Travel-map.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('travel-map-popup')">
+                                                                Mật độ di chuyển
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 order-9 order-md-8">
+                                                        <div class="app-sub-feature master-plan-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('masterplan-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Masterplan.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title master-plan-sub-feature-title" onclick="openPopup('masterplan-popup')">
+                                                                Chiến lược tổng thể phòng chống dịch bệnh Covid-19
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 col-md-4 order-8 order-md-9">
+                                                        <div class="app-sub-feature">
+                                                            <div class="app-sub-feature-img" onclick="openPopup('infected-map-popup')">
+                                                                <img class="img-fluid" src="~/Assets/client/WebPcCovid/Home/Infected-map.svg">
+                                                            </div>
+                                                            <div class="app-sub-feature-title" onclick="openPopup('infected-map-popup')">
+                                                                Xu hướng lây nhiễm
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CuongNMb home -->
+
+
+                                        <div class="bluezone-wrap">
+                                            <div class="container bluezone-container-mb">
+                                                <div class="row bluezone-feature-row">
+                                                    <div class="col-12 col-12-mb">
+                                                        <div class="bluezone-download-wrap">
+                                                            <div class="bluezone-download-title">
+                                                                Tải ngay ứng dụng <span class="bluezone-blue">PC-Covid</span>
+                                                            </div>
+                                                            <div class="bluezone-download-link-wrap">
+                                                                <!-- <a class="pccovid-download-apk" href="/WebPcCovid/doc/PC-Covid.apk" target="_blank"><img src="/WebPcCovid/Home/download-app.svg"></a> -->
+                                                                <div class="bluezone-download-appStore">
+                                                                    <div>
+                                                                        <a href="https://apps.apple.com/vn/app/bluezone/id1508062685?ls=1" target="_blank"><img class="app-store-download img-fluid" src="~/Assets/client/WebPcCovid/Home/App-Store.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bluezone-download-ggStore">
+                                                                    <div>
+                                                                        <a href="https://play.google.com/store/apps/details?id=com.mic.bluezone" target="_blank"><img class="gg-play-download img-fluid" src="~/Assets/client/WebPcCovid/Home/Google-play.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bluezone-download-huaweiStore">
+                                                                    <div>
+                                                                        <a href="https://appgallery.huawei.com/#/app/C102911167?sharePrepath=ag&channelId=web&detailType=0" target="_blank"><img class="huawei-download img-fluid" src="~/Assets/client/WebPcCovid/Home/huawei.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container" id="bz-new-container">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12 bz-new-col">
+                                                        <div id="news-loading" class="d-none">
+                                                            <img src="~/Assets/client/WebPcCovid/Home/loading.svg">
+                                                        </div>
+                                                        <div id="app-new-wrap" class="bz-new-wrap">
+                                                            <div class="bz-main-new-wrap" id="home-new-wrap">
+                                                                <div class="bz-main-new-img">
+                                                                    <a href="https://moh.gov.vn/tin-tong-hop/-/asset_publisher/k206Q9qkZOqn/content/pc-covid-la-ung-dung-duy-nhat-phuc-vu-phong-chong-covid-19">
+                                                                        <img src="~/Assets/client/WebPcCovid/clip/pccovid.jpg" class="img-fluid bluezone-news-img">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="bz-main-new-title">
+                                                                    <a href="https://moh.gov.vn/tin-tong-hop/-/asset_publisher/k206Q9qkZOqn/content/pc-covid-la-ung-dung-duy-nhat-phuc-vu-phong-chong-covid-19">PC-Covid là ứng dụng duy nhất phục vụ phòng, chống COVID-19</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 bz-new-col">
+
+                                                        <div class="bz-main-new-wrap">
+                                                            <div class="bz-main-new-img">
+                                                                <a href="https://vnvc.vn/dieu-tri-phong-ngua-covid/">
+                                                                    <img src="~/Assets/client/WebPcCovid/clip/phong-chong-covid-1.jpg" class="img-fluid bluezone-news-img">
+                                                                 
+                                                                </a>
+                                                            </div>
+                                                            <div class="bz-main-new-title">
+                                                                <a href="https://vnvc.vn/dieu-tri-phong-ngua-covid/">
+                                                                    Cách điều trị và phòng ngừa COVID-19 Theo quy định bộ y tế
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        @*<input type="hidden" id="getHomeNewsURL" value="home9d8b.html?p_p_id=HomePortlet_INSTANCE_vOAbkzNhPy80&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;_HomePortlet_INSTANCE_vOAbkzNhPy80_javax.portlet.action=getHomeNews">
+
+                                        <script type="text/javascript">
+                                            $(function () {
+                                                var getHomeNewsURL = $("#getHomeNewsURL").val();
+                                                if (location.protocol !== 'index.html') {
+                                                    getHomeNewsURL = getHomeNewsURL.replace("http", "https");
+                                                }
+                                                $.ajax({
+                                                    url: getHomeNewsURL,
+                                                    type: 'GET',
+                                                    success: function (result) {
+                                                        if ($.isNumeric(result)) {
+                                                            console.log("resule numberic la: " + result);
+                                                        } else {
+                                                            rentHomeNews(result);
+                                                        }
+                                                    }
+                                                });
+                                            });
+
+                                            function openPopup(popupId) {
+                                                popupId = "#" + popupId;
+                                                $.fancybox.open({
+                                                    src: popupId,
+                                                    clickSlide: false,
+                                                    clickOutside: false,
+                                                    smallBtn: false
+                                                });
+                                            }
+                                        </script>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<form action="#" id="hrefFm" method="post" name="hrefFm"><span></span></form>*@
+</div>
+

@@ -1,0 +1,228 @@
+﻿@model  Model.EF.tblNguoiDung
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4 style="padding:20px; text-align:center">HỒ SƠ NGƯỜI DÙNG</h4>
+
+
+@using (Html.BeginForm("Index", "Information", FormMethod.Post))
+{
+
+
+    if (Model != null)
+    {
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-6" style="background-color: #99FFFF ">
+                    <div class="col-md-6" style="padding:25px">
+
+                        <div class="form-group">
+
+                            <h2> @Html.DisplayFor(model => model.Ho) @Html.DisplayFor(model => model.TenDem)  @Html.DisplayFor(model => model.Ten) </h2>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.NgaySinh)
+
+
+
+                            @Html.DisplayFor(model => model.NgaySinh)
+
+
+                        </div>
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.GioiTinh)
+
+
+
+                            <h4> @Html.DisplayFor(model => model.GioiTinh)</h4>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.DiaChi)
+
+
+
+                            <h4>@Html.DisplayFor(model => model.DiaChi)</h4>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.DienThoai)
+
+
+
+                            <h4> @Html.DisplayFor(model => model.DienThoai)</h4>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.SoCMND)
+
+
+
+                            <h4> @Html.DisplayFor(model => model.SoCMND)</h4>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.SoMuiTiem)
+
+
+
+                            <h4>@Html.DisplayFor(model => model.SoMuiTiem)</h4>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            @Html.DisplayNameFor(model => model.LoaiThe)
+
+
+
+                            <h4 name="qrText">@Html.DisplayFor(model => model.LoaiThe)</h4>
+
+                        </div>
+
+
+                    </div>
+
+                    <div style="text-align:center; padding:15px">
+
+                        <a href="/Information/ChangePassword/@Model.MaSo" class="btn btn-primary">
+                            ĐỔI MẬT KHẨU
+                        </a>
+
+                        <a href="/Information/Edit/@Model.MaSo" style="margin-left:10px" class="btn btn-primary">
+                            CẬP NHẬT THÔNG TIN
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+                @if (Model.LoaiThe == "Thẻ Xanh")
+                {
+                    <div class="col-sm-6" style="background-color: #30b55c; ">
+
+
+                        <div class="form-group" style="text-align:center; padding:30px;">
+
+                            <img src="~/Assets/client/o/PcCovidTheme/images/avt.jpg" style="border-radius: 50%" width="69%" height="69%" />
+
+                        </div>
+
+                        <div style="text-align:center; padding:30px">
+
+                            <input type="submit" value="Tạo QR CÁ NHÂN" class="btn btn-primary" />
+
+                            <a href="/KhaiBaoYTE/Index" class="btn btn-primary">
+                                KHAI BÁO Y TẾ
+                            </a>
+
+                            <a href="/QR/Index" class="btn btn-primary">
+                                TẠO QR CODE ĐỊA ĐIỂM
+                            </a>
+
+                        </div>
+
+                    </div>
+                }
+
+                @if (Model.LoaiThe == "Thẻ Vàng")
+                {
+                    <div class="col-sm-6" style="background-color:yellow;">
+                        <div class="form-group" style="text-align:center; padding:30px">
+
+                            <img src="~/Assets/client/o/PcCovidTheme/images/QR.jpg" width="40%" height="40%" />
+
+                        </div>
+
+                        <div class="form-group" style="text-align:center; padding:30px">
+
+                            <input type="submit" value="Tạo QR CODE CÁ NHÂN" class="btn btn-primary" />
+
+                            <a href="/KhaiBaoYTE/Index" class="btn btn-primary">
+                                KHAI BÁO Y TẾ
+                            </a>
+
+                            <a href="/QR/QRDiaDiem" class="btn btn-primary">
+                                TẠO QR CODE ĐỊA ĐIỂM
+                            </a>
+
+                        </div>
+
+                    </div>
+                }
+
+                @if (Model.LoaiThe == "Thẻ Đỏ")
+                {
+                    <div class="col-sm-6" style="background-color:red;">
+                        <div class="form-group" style="text-align:center; padding:30px">
+
+                            <img src="~/Assets/client/o/PcCovidTheme/images/QR.jpg" width="40%" height="40%" />
+
+                        </div>
+
+                        <div class="form-group" style="text-align:center; padding:30px">
+
+                            <input type="submit" value="Tạo QR CODE CÁ NHÂN" class="btn btn-primary" />
+
+                            <a href="/KhaiBaoYTE/Index" class="btn btn-primary">
+                                KHAI BÁO Y TẾ
+                            </a>
+
+                            <a href="/QR/QRDiaDiem" class="btn btn-primary">
+                                TẠO QR CODE ĐỊA ĐIỂM
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                }
+
+            </div>
+        </div>
+    }
+
+    <div style="text-align:center; color:red">
+       
+        <input type="hidden" 
+               value=" @Html.DisplayFor(model => model.SoCMND) |  @Html.DisplayFor(model => model.Ho) @Html.DisplayFor(model => model.TenDem) @Html.DisplayFor(model => model.Ten) | @Html.DisplayFor(model => model.NgaySinh) | @Html.DisplayFor(model => model.DienThoai) " name="qrcode" />
+        <br />
+         <h5>Mọi thông tin của bạn đều được bảo mật và chỉ phục vụ mục đích phòng - chống dịch Covid 19</h5>
+        <br />
+
+        @if (ViewBag.QRCodeImage != null)
+        {
+            <h3 style="height:37px">TẠO MÃ QR CÁ NHÂN THÀNH CÔNG</h3>
+            <img src="@ViewBag.QRCodeImage" alt="" style="height:400px; width:400px" />
+        }
+    </div>
+
+}
+
+

@@ -1,0 +1,117 @@
+﻿@model PagedList.IPagedList<Model.EF.tblNguoiDung>
+@using PagedList.Mvc;
+
+
+@{
+    ViewBag.Title = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2 style="text-align:center">Danh sách người dùng</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Danh sách người dùng</h6>
+            </div>
+            <div class="card-body">
+
+                @using (Html.BeginForm("Index", "User", FormMethod.Get))
+                {
+                    <div class="input-group" style="margin:15px; width:500px">
+                        <input type="text" name="searchString" class="form-control bg-light border-0 small" placeholder="Từ khóa..."
+                               aria-label="Search" value="@ViewBag.SearchString" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                        &emsp;&emsp;
+                        <div>
+                            <a href="/Admin/User/Create" class="btn btn-primary">
+                                Thêm mới
+                            </a>
+                            <a href="/Admin/TheXanh/Index" class="btn btn-primary">
+                                Thẻ xanh
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                }
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" style="text-align:center" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ID</th>
+                                <th>Họ và tên</th>
+                                <th>Ngày sinh</th>
+                                <th>Phái</th>
+                                <th>Quê quán</th>
+                                <th>Địa chỉ</th>
+                                <th>SĐT</th>
+                                @*<th style="width:50px">Email</th>*@
+                                <th>Số CMND</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item.MaSo">
+                                    <td>
+                                        <a href="/Admin/User/Edit/@item.MaSo">Sửa</a>
+                                        |
+
+                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaSo }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có muốn xóa người dùng này",
+                                            OnComplete = "$('#row_" + item.MaSo + "').remove()",
+                                            HttpMethod = "Delete"
+                                   })
+                                    </td>
+                                    <td>@item.MaSo</td>
+                                    <td>@item.Ho @item.TenDem @item.Ten</td>
+                                    <td>@item.NgaySinh</td>
+                                    <td>@item.GioiTinh</td>
+                                    <td>@item.QueQuan</td>
+                                    <td>@item.DiaChi</td>
+                                    <td>@item.DienThoai</td>
+                                    <td>@item.SoCMND</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new
+               {
+                   page,
+                   sortOrder = ViewBag.CurrentSort,
+                   currentFilter = ViewBag.CurrentFilter,
+                   @searchString = @ViewBag.SearchString
+                    }
+                                                                ),
+                                                                new PagedListRenderOptions()
+                    {
+                        LiElementClasses = new List<string> { "btn btn-light" }
+                                                                })
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

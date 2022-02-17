@@ -1,0 +1,416 @@
+﻿
+<!DOCTYPE html>
+
+
+<html class="ltr" dir="ltr" lang="en-US">
+
+<head>
+    <title>PC-Covid: Ứng dụng phòng, chống dịch Covid-19 Quốc gia</title>
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <meta charset="UTF-8">
+    <meta name="description" content="PC-Covid: Ứng dụng phòng, chống dịch Covid-19 Quốc gia">
+
+
+    <script src="~/Assets/client/o/frontend-js-web/jquery/jquery.js"></script>
+    <script src="~/Assets/client/o/frontend-js-web/clay/bootstrap.js"></script>
+    <script src="~/Assets/client/o/frontend-js-web/clay/popper.js"></script>
+    @*<script src="~/Assets/client/o/PcCovidTheme/js/main7844.js"></script>*@
+    <script src="~/Assets/client/o/PcCovidTheme/js/jquery.fancybox.min7844.js"></script>
+    <link href="~/Assets/client/o/PcCovidTheme/css/clay.css" rel="stylesheet" />
+    <link href="~/Assets/client/o/PcCovidTheme/css/main3660.css" rel="stylesheet" />
+    <link href="~/Assets/client/o/PcCovidTheme/css/jquery.fancybox.mindc8c.css" rel="stylesheet" />
+    <link href="~/Assets/client/o/PcCovidTheme/images/favicon.ico" rel="Shortcut Icon" />
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+
+</head>
+
+<body class=" controls-visible  yui3-skin-sam signed-out public-page site">
+    <div class="pt-0" id="wrapper">
+        <header class="navbar-static-top">
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-12 col-mobile">
+                        <nav class="navbar navbar-expand-lg navbar-light float-right">
+                            <button id="mobile-menu-btn" class="navbar-toggler ui-button ui-shadow ui-corner-all ui-widget ui-button-inherit" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="show-icon-menu"></div>
+                                <div class="show-icon-menu"></div>
+                                <div class="show-icon-menu"></div>
+                            </button>
+                            <a class="navbar-brand pccovid-logo" href="/Home/Index">
+                                <img class="img-main-specical" src="~/Assets/client/WebPcCovid/theme/pccovid-logo.svg" alt="">
+                                <span class="pccovid-title">PC-COVID</span>
+                            </a>
+                            <span class="navbar-brand gach"><img class="gach-img" src="~/Assets/client/WebPcCovid/theme/line_top.svg"></span>
+                            <span class="navbar-brand" target="_blank" href="https://www.mic.gov.vn/"><img src="~/Assets/client/WebPcCovid/theme/logo2.svg" alt="" class="logo_mb"></span>
+                            <span class="navbar-brand gach"><img class="gach-img" src="~/Assets/client/WebPcCovid/theme/line_top.svg"></span>
+                            <span class="navbar-brand" target="_blank" href="https://ncov.moh.gov.vn/"><img src="~/Assets/client/WebPcCovid/theme/logo3.svg" alt="" class="logo_mb"></span>
+                            <span class="navbar-brand gach"><img class="gach-img" src="~/Assets/client/WebPcCovid/theme/line_top.svg"></span>
+                            <span class="navbar-brand" target="_blank" href="http://bocongan.gov.vn/"><img src="~/Assets/client/WebPcCovid/theme/cong-an.png" alt="" class="logo_mb"></span>
+                            <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto float-right">
+
+                                    <li class="nav-item-bkav">
+                                        <a class="nav-link" href="/SoLieu/Index">Số liệu thực tế</a>
+                                    </li>
+
+                                    <li class="nav-item-bkav">
+                                        <a class="nav-link" href="/GioiThieu/Index">Giới thiệu</a>
+                                    </li>
+                                    <li class="nav-item-bkav">
+                                        <a class="nav-link" href="/HuongDan/Index">Hướng dẫn</a>
+                                    </li>
+                                    <li class="nav-item-bkav" id="faq-nav-item">
+                                        <a class="nav-link" href="/PhanAnh/Create">Phản ánh</a>
+                                    </li>
+
+                                    @{
+                                        var session = (UserLogin)Session[TheXanhCovid19.Common.CommonConstants.USER_SESSION];
+                                    }
+                                    @if (session == null)
+                                    {
+                                        <li class="nav-item-bkav">
+                                            <a class="nav-link" href="/User/Login">Đăng nhập</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+
+                                        <li class="nav-item-bkav">
+                                            <a class="nav-link" href="/Information/Index">@session.UserName</a>
+                                        </li>
+
+                                        <li style="margin-top:12px; margin-left:30px; color:red">
+
+                                            @Html.ActionLink("Đăng xuất", "Logout", "User", null, new { @style = "color:red; font-size:13px" })
+
+                                        </li>
+
+                                    }
+
+
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <button id="myBtn" title="Lên đầu trang"><img src='~/Assets/client/WebPcCovid/Home/up.png' title='Lên đầu trang' width='45px' /></button>
+        <script>
+            window.onscroll = function () { scrollFunction() };
+            function scrollFunction() {
+
+                if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            document.getElementById('myBtn').addEventListener("click", function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+               
+            });
+        </script>
+
+
+        <style>
+            /* Mui ten lên dau trang */
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 60px;
+                right: 10px;
+                z-index: 99;
+                border: none;
+                outline: none;
+                background-color: #fff;
+                border: 2px solid #ccc;
+                color: white;
+                cursor: pointer;
+                border-radius: 30px;
+                opacity: 0.7;
+            }
+
+            #myBtn:hover {
+                background-color: #f1f1f1;
+            }
+
+
+            /* Nút liên hệ */
+            .hotline-phone-ring-wrap {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              z-index: 999999;
+            }
+            .hotline-phone-ring {
+              position: relative;
+              visibility: visible;
+              background-color: transparent;
+              width: 110px;
+              height: 110px;
+              cursor: pointer;
+              z-index: 11;
+              -webkit-backface-visibility: hidden;
+              -webkit-transform: translateZ(0);
+              transition: visibility .5s;
+              left: 0;
+              bottom: 0;
+              display: block;
+            }
+            .hotline-phone-ring-circle {
+	            width: 85px;
+              height: 85px;
+              top: 10px;
+              left: 10px;
+              position: absolute;
+              background-color: transparent;
+              border-radius: 100%;
+              border: 2px solid #e60808;
+              -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+              animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+              transition: all .5s;
+              -webkit-transform-origin: 50% 50%;
+              -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+              opacity: 0.5;
+            }
+            .hotline-phone-ring-circle-fill {
+	            width: 55px;
+              height: 55px;
+              top: 25px;
+              left: 25px;
+              position: absolute;
+              background-color: rgba(230, 8, 8, 0.7);
+              border-radius: 100%;
+              border: 2px solid transparent;
+              -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+              animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+              transition: all .5s;
+              -webkit-transform-origin: 50% 50%;
+              -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+            }
+            .hotline-phone-ring-img-circle {
+	            background-color: #e60808;
+	            width: 33px;
+              height: 33px;
+              top: 37px;
+              left: 37px;
+              position: absolute;
+              background-size: 20px;
+              border-radius: 100%;
+              border: 2px solid transparent;
+              -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+              animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+              -webkit-transform-origin: 50% 50%;
+              -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .hotline-phone-ring-img-circle .pps-btn-img {
+	            display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+            }
+            .hotline-phone-ring-img-circle .pps-btn-img img {
+	            width: 20px;
+	            height: 20px;
+            }
+            .hotline-bar {
+              position: absolute;
+              background: rgba(230, 8, 8, 0.75);
+              height: 40px;
+              width: 180px;
+              line-height: 40px;
+              border-radius: 3px;
+              padding: 0 10px;
+              background-size: 100%;
+              cursor: pointer;
+              transition: all 0.8s;
+              -webkit-transition: all 0.8s;
+              z-index: 9;
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+              border-radius: 50px !important;
+              /* width: 175px !important; */
+              left: 33px;
+              bottom: 37px;
+            }
+            .hotline-bar > a {
+              color: #fff;
+              text-decoration: none;
+              font-size: 15px;
+              font-weight: bold;
+              text-indent: 50px;
+              display: block;
+              letter-spacing: 1px;
+              line-height: 40px;
+              font-family: Arial;
+            }
+            .hotline-bar > a:hover,
+            .hotline-bar > a:active {
+              color: #fff;
+            }
+            @@-webkit-keyframes phonering-alo-circle-anim {
+              0% {
+                -webkit-transform: rotate(0) scale(0.5) skew(1deg);
+                -webkit-opacity: 0.1;
+              }
+              30% {
+                -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+                -webkit-opacity: 0.5;
+              }
+              100% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+                -webkit-opacity: 0.1;
+              }
+            }
+            @@-webkit-keyframes phonering-alo-circle-fill-anim {
+              0% {
+                -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+                opacity: 0.6;
+              }
+              50% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+                opacity: 0.6;
+              }
+              100% {
+                -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+                opacity: 0.6;
+              }
+            }
+            @@-webkit-keyframes phonering-alo-circle-img-anim {
+              0% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+              }
+              10% {
+                -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+              }
+              20% {
+                -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+              }
+              30% {
+                -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+              }
+              40% {
+                -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+              }
+              50% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+              }
+              100% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+              }
+            }
+            @@media (max-width: 768px) {
+              .hotline-bar {
+                display: none;
+              }
+            }
+
+
+
+
+        </style>
+
+
+
+        @if (TempData["AlertMessage"] != null)
+        {
+            <div id="AlertBox" class="alert @TempData["AlertType"] hide">
+                @TempData["AlertMessage"];
+            </div>
+        }
+
+        @RenderBody()
+
+    <footer id="footer" class="bs-docs-footer">
+        <div class="container">
+            <div class="row box-footer-mb">
+                <div class="col-12 col-md-6">
+                    <div class="footer-dev-team-container">
+                        <div class="footer-dev-team-title">
+                            Đơn vị tài trợ phát triển
+                        </div>
+                        <div class="footer-dev-team-wrap">
+                            <div class="footer-dev-team bkav-dev-team">
+                                <img src="~/Assets/client/WebPcCovid/theme/logo_bkav.svg">
+                            </div>
+                            <div class="footer-dev-team viettel-dev-team">
+                                <img src="~/Assets/client/WebPcCovid/theme/logo_viettel2.svg">
+                            </div>
+                            <div class="footer-dev-team vnpt-dev-team">
+                                <img src="~/Assets/client/WebPcCovid/theme/logo_vnpt2.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav-wrap">
+                        <div class="footer-nav faq-link"><a href="/FAQ/Index">FAQ</a></div>
+                        <div class="footer-nav huongdan-link"><a href="/HuongDan/Index">Hướng dẫn</a></div>
+                        <div class="footer-nav tailieu-link"><a href="/GioiThieu/Index">Giới thiệu</a></div>
+                        <div class="footer-nav lienhe-link"><a href="/LienHe/Index">Liên hệ</a></div>
+                        <div class="footer-nav dksd-link"><a href="/SoLieu/Index">Số liệu thực tế</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="hotline-phone-ring-wrap">
+            <div class="hotline-phone-ring">
+                <div class="hotline-phone-ring-circle"></div>
+                <div class="hotline-phone-ring-circle-fill"></div>
+                <div class="hotline-phone-ring-img-circle">
+                    <a href="tel:0332289599" class="pps-btn-img">
+                        <img src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+                    </a>
+                </div>
+            </div>
+            <div class="hotline-bar">
+                <a href="tel:0332289599">
+                    <span class="text-hotline">0332.289.599</span>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#AlertBox').removeClass('hide');
+            $('#AlertBox').delay(9000).slideUp(1000);
+        })
+    </script>
+
+
+
+
+@RenderSection("jsFooter", required: false)
+
+</body>
+
+</html>
+
